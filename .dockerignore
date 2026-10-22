@@ -1,0 +1,20 @@
+# Enviar solamente los archivos necesarios para construir el sitio.
+**
+!Dockerfile
+!nginx.conf
+!index.html
+!galeria.html
+!css/
+!css/**
+!js/
+!js/**
+!imagenes/
+!imagenes/**
+!materiales/
+!materiales/**
+!trabajos-practicos/
+!trabajos-practicos/**
+
+# Carpetas de trabajo ya excluidas del repositorio.
+materiales/borrar/
+trabajos-practicos/TP Anterior sin logo unificado/
