@@ -2,8 +2,7 @@
 **
 !Dockerfile
 !nginx.conf
-!index.html
-!galeria.html
+!/*.html
 !css/
 !css/**
 !js/

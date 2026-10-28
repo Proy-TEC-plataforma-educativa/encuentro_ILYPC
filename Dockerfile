@@ -2,7 +2,7 @@ FROM nginx:stable-alpine
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-COPY index.html galeria.html /usr/share/nginx/html/
+COPY *.html /usr/share/nginx/html/
 COPY css/ /usr/share/nginx/html/css/
 COPY js/ /usr/share/nginx/html/js/
 COPY imagenes/ /usr/share/nginx/html/imagenes/
