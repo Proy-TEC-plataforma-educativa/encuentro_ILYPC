@@ -11,6 +11,17 @@
   <title>Momentos compartidos · ILyPC · UNAHUR</title>
   <link rel="stylesheet" href="css/estilos.css">
   <style>
+    .training-intro { padding: 4rem clamp(1.2rem, 7vw, 7.5rem) 0; max-width: 1050px; }
+    .training-intro h2 { font: 400 clamp(2.2rem, 4vw, 3.8rem)/1.1 Georgia, serif; margin: 0 0 1.5rem; }
+    .training-intro p:not(.eyebrow) { line-height: 1.7; }
+    .training-grid { padding-top: 2rem; }
+
+    .hero-layout { display:grid; grid-template-columns:minmax(0, 1.05fr) minmax(0, .95fr); gap:clamp(2rem, 5vw, 5rem); align-items:center; }
+    .hero-layout .hero-copy { min-width:0; }
+    .hero-layout .hero-copy > p:last-child { max-width:720px; color:var(--muted); font-size:1.12rem; line-height:1.7; margin:2rem 0 0; }
+    .hero-photo { margin:0; padding:clamp(.75rem, 2vw, 1.5rem); background:#d9ec9b; box-shadow:14px 14px 0 #17332b; transform:rotate(1deg); }
+    .hero-photo img { display:block; width:100%; height:auto; aspect-ratio:4 / 3; object-fit:cover; border:5px solid #fff; }
+    @media (max-width:900px) { .hero-layout { grid-template-columns:1fr; } .hero-photo { max-width:40rem; margin-bottom:1rem; } }
     /* Ajustes propios de la galería: conservan el estilo general del sitio. */
     .gallery-grid {
       display: grid;
@@ -30,8 +41,8 @@
 
     .gallery-item-wide { grid-column: span 2; }
 
-    .tm-photo-secondary { grid-column: 1; }
-    .tm-video { grid-column: 2; }
+
+
 
     .gallery-media,
     .gallery-open {
@@ -112,6 +123,7 @@
     <a href="index.html#materiales">Materiales</a>
     <a href="index.html#trabajos-practicos">Trabajos prácticos</a>
     <a href="index.html#equipo">Equipo</a>
+    <a href="formacion-docente.html">Formación docente</a>
     <a href="galeria.html" aria-current="page">Momentos</a>
   </nav>
 </header>
@@ -119,9 +131,14 @@
 <main>
   <header class="gallery-hero">
     <a class="gallery-back" href="index.html">← Volver al sitio del proyecto</a>
+    <div class="hero-layout">
+      <div class="hero-copy">
     <p class="eyebrow">Pilas Bloques en las aulas</p>
     <h1>Momentos compartidos</h1>
     <p>Una selección de escenas de las clases en las que estudiantes y docentes exploraron desafíos, intercambiaron ideas y construyeron soluciones con Pilas Bloques.</p>
+      </div>
+      <figure class="hero-photo"><img src="imagenes/galeria/TM_PILAS_BLOQUES.jpeg" alt="Estudiantes y docentes participan en una clase de simulación con Pilas Bloques"></figure>
+    </div>
   </header>
 
   <section class="gallery-intro" aria-label="Acerca de la galería">
@@ -130,16 +147,9 @@
   </section>
 
   <section class="gallery-grid" id="galeria" aria-label="Galería de momentos compartidos">
-    <figure class="gallery-item gallery-item-wide">
-      <button type="button" class="gallery-open" data-full="imagenes/galeria/TM_PILAS_BLOQUES.jpeg" data-alt="Clase viva de simulación de ejercicios con Pilas Bloques">
-        <img src="imagenes/galeria/TM_PILAS_BLOQUES.jpeg" alt="Clase viva de simulación de ejercicios con Pilas Bloques">
-        <span>Ampliar imagen</span>
-      </button>
-      <figcaption><strong>Clase viva de simulación · Pilas Bloques</strong><span>Estudiantes y docentes participan de una simulación colectiva de los ejercicios.</span></figcaption>
-    </figure>
 
     <figure class="gallery-item tm-photo-secondary">
-      <button type="button" class="gallery-open" data-full="imagenes/galeria/TM2.jpeg" data-alt="Clase viva con estudiantes resolviendo ejercicios de Pilas Bloques">
+      <button type="button" class="gallery-open" data-full="imagenes/galeria/TM2.jpeg" data-title="Simular para comprender" data-alt="Clase viva con estudiantes resolviendo ejercicios de Pilas Bloques">
         <img src="imagenes/galeria/TM2.jpeg" alt="Clase viva con estudiantes resolviendo ejercicios de Pilas Bloques">
         <span>Ampliar imagen</span>
       </button>
@@ -157,7 +167,7 @@
     </figure>
 
     <figure class="gallery-item gallery-item-wide">
-      <button type="button" class="gallery-open" data-full="imagenes/galeria/Ejercicios1C_2026.jpeg" data-alt="Estudiantes explorando desafíos de Pilas Bloques en el aula de informática">
+      <button type="button" class="gallery-open" data-full="imagenes/galeria/Ejercicios1C_2026.jpeg" data-title="Ejercicios del primer cuatrimestre de 2026" data-alt="Estudiantes explorando desafíos de Pilas Bloques en el aula de informática">
         <img src="imagenes/galeria/Ejercicios1C_2026.jpeg" alt="Estudiantes explorando un desafío de Pilas Bloques en computadoras">
         <span>Ampliar imagen</span>
       </button>
@@ -165,7 +175,7 @@
     </figure>
 
     <figure class="gallery-item">
-      <button type="button" class="gallery-open" data-full="imagenes/galeria/2doParcial1C2026.jpeg" data-alt="Estudiantes resolviendo el segundo parcial del primer cuatrimestre de 2026">
+      <button type="button" class="gallery-open" data-full="imagenes/galeria/2doParcial1C2026.jpeg" data-title="Segundo parcial · Primer cuatrimestre 2026" data-alt="Estudiantes resolviendo el segundo parcial del primer cuatrimestre de 2026">
         <img src="imagenes/galeria/2doParcial1C2026.jpeg" alt="Grupo de estudiantes intercambiando ideas durante una actividad">
         <span>Ampliar imagen</span>
       </button>
@@ -183,7 +193,7 @@
     </figure>
 
     <figure class="gallery-item">
-      <button type="button" class="gallery-open" data-full="imagenes/galeria/integradorJulio26.jpeg" data-alt="Estudiantes realizando la actividad integradora de julio de 2026">
+      <button type="button" class="gallery-open" data-full="imagenes/galeria/integradorJulio26.jpeg" data-title="Integrador · Julio 2026" data-alt="Estudiantes realizando la actividad integradora de julio de 2026">
         <img src="imagenes/galeria/integradorJulio26.jpeg" alt="Docente acompañando la resolución de una actividad de programación">
         <span>Ampliar imagen</span>
       </button>
@@ -191,7 +201,7 @@
     </figure>
 
     <figure class="gallery-item">
-      <button type="button" class="gallery-open" data-full="imagenes/galeria/Julieta1C2026.jpeg" data-alt="Clase acompañada por Julieta durante el primer cuatrimestre de 2026">
+      <button type="button" class="gallery-open" data-full="imagenes/galeria/Julieta1C2026.jpeg" data-title="Clase con Julieta" data-alt="Clase acompañada por Julieta durante el primer cuatrimestre de 2026">
         <img src="imagenes/galeria/Julieta1C2026.jpeg" alt="Clase acompañada por Julieta durante el primer cuatrimestre de 2026">
         <span>Ampliar imagen</span>
       </button>
@@ -199,7 +209,7 @@
     </figure>
 
     <figure class="gallery-item gallery-item-wide">
-      <button type="button" class="gallery-open" data-full="imagenes/galeria/NocheDeLasUNIVERSIDADES2025.jpeg" data-alt="Estudiantes presentando sus producciones en la Noche de las Universidades 2025">
+      <button type="button" class="gallery-open" data-full="imagenes/galeria/NocheDeLasUNIVERSIDADES2025.jpeg" data-title="Noche de las Universidades 2025" data-alt="Estudiantes presentando sus producciones en la Noche de las Universidades 2025">
         <img src="imagenes/galeria/NocheDeLasUNIVERSIDADES2025.jpeg" alt="Estudiantes presentando sus producciones en la Noche de las Universidades 2025">
         <span>Ampliar imagen</span>
       </button>

@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Jornada de formación docente sobre Pilas Bloques en UNAHUR.">
+   <link rel="icon" href="imagenes/Favicon_Pilas_Bloques_ILYPC/favicon.ico" sizes="any">
+  <link rel="icon" href="imagenes/Favicon_Pilas_Bloques_ILYPC/favicon-pilas-bloques.svg" type="image/svg+xml">
+  <link rel="icon" href="imagenes/Favicon_Pilas_Bloques_ILYPC/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="imagenes/Favicon_Pilas_Bloques_ILYPC/favicon-192.png">
+  <title>Formación docente · ILyPC · UNAHUR</title>
+  <link rel="stylesheet" href="css/estilos.css">
+  <style>
+    .training-intro { padding: 4rem clamp(1.2rem, 7vw, 7.5rem) 0; max-width: 1050px; }
+    .training-intro h2 { font: 400 clamp(2.2rem, 4vw, 3.8rem)/1.1 Georgia, serif; margin: 0 0 1.5rem; }
+    .training-intro p:not(.eyebrow) { line-height: 1.7; }
+    .training-grid { padding-top: 2rem; }
+
+    .hero-layout { display:grid; grid-template-columns:minmax(0, 1.05fr) minmax(0, .95fr); gap:clamp(2rem, 5vw, 5rem); align-items:center; }
+    .hero-layout .hero-copy { min-width:0; }
+    .hero-layout .hero-copy > p:last-child { max-width:720px; color:var(--muted); font-size:1.12rem; line-height:1.7; margin:2rem 0 0; }
+    .hero-photo { margin:0; padding:clamp(.75rem, 2vw, 1.5rem); background:#d9ec9b; box-shadow:14px 14px 0 #17332b; transform:rotate(1deg); }
+    .hero-photo img { display:block; width:100%; height:auto; aspect-ratio:4 / 3; object-fit:cover; border:5px solid #fff; }
+    @media (max-width:900px) { .hero-layout { grid-template-columns:1fr; } .hero-photo { max-width:40rem; margin-bottom:1rem; } }
+    /* Ajustes propios de la galería: conservan el estilo general del sitio. */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+      align-items: start;
+    }
+
+    .gallery-item {
+      min-width: 0;
+      margin: 0;
+      overflow: hidden;
+      border-radius: 1rem;
+      background: #fff;
+      box-shadow: 0 .5rem 1.5rem rgba(23, 61, 46, .12);
+    }
+
+    .gallery-item-wide { grid-column: span 2; }
+
+    .tm-photo-secondary { grid-column: 1; }
+    .tm-video { grid-column: 2; }
+
+    .gallery-media,
+    .gallery-open {
+      position: relative;
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      border: 0;
+      background: #16251f;
+    }
+
+    .gallery-open { cursor: zoom-in; }
+
+    .gallery-media img,
+    .gallery-media video,
+    .gallery-open img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .tm-video .gallery-media video { object-fit: contain; }
+
+    .gallery-open > span {
+      position: absolute;
+      right: .75rem;
+      bottom: .75rem;
+      padding: .4rem .7rem;
+      border-radius: 999px;
+      color: #fff;
+      background: rgba(0, 0, 0, .72);
+      font-size: .82rem;
+    }
+
+    .gallery-item figcaption {
+      display: grid;
+      gap: .25rem;
+      padding: 1rem 1.1rem 1.15rem;
+    }
+
+    .gallery-item figcaption strong { color: #116447; }
+    .gallery-item figcaption span { line-height: 1.45; }
+
+    /* Los videos filmados con el celular usan su proporción vertical real. */
+    .gallery-video-portrait .gallery-media {
+      width: min(100%, 22rem);
+      aspect-ratio: 9 / 16;
+      margin-inline: auto;
+    }
+
+    @media (max-width: 900px) {
+      .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .gallery-item-wide { grid-column: span 2; }
+    }
+
+    @media (max-width: 620px) {
+      .gallery-grid { grid-template-columns: 1fr; gap: 1rem; }
+      .gallery-item-wide { grid-column: auto; }
+      .tm-photo-secondary,
+      .tm-video { grid-column: auto; }
+      .gallery-open { aspect-ratio: 4 / 3; }
+    }
+  </style>
+  <script src="js/sitio.js" defer></script>
+  <script src="js/galeria.js" defer></script>
+</head>
+<body class="gallery-page">
+<a class="skip-link" href="#capacitacion-docente">Saltar al contenido</a>
+<header class="site-header">
+  <a class="brand" href="index.html#inicio" aria-label="Volver al inicio del sitio"><img src="imagenes/unahur.png" alt="Universidad Nacional de Hurlingham"></a>
+  <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav">Menú</button>
+  <nav id="main-nav" aria-label="Navegación principal">
+    <a href="index.html#proyecto">Proyecto</a>
+    <a href="index.html#materiales">Materiales</a>
+    <a href="index.html#trabajos-practicos">Trabajos prácticos</a>
+    <a href="index.html#equipo">Equipo</a>
+    <a href="formacion-docente.html" aria-current="page">Formación docente</a>
+    <a href="galeria.html">Momentos</a>
+  </nav>
+</header>
+
+<main>
+  <header class="gallery-hero">
+    <a class="gallery-back" href="index.html">← Volver al sitio del proyecto</a>
+    <div class="hero-layout">
+      <div class="hero-copy">
+    <p class="eyebrow">Formación docente · UNAHUR</p>
+    <h1>Aprender y construir en equipo</h1>
+    <p>Un espacio para compartir las experiencias de formación y reflexión del equipo docente de ILyPC.</p>
+      </div>
+      <figure class="hero-photo"><img src="imagenes/capacitacion-docente/profes_y_asistentes.jpeg" alt="Docentes y asistentes reunidos durante la jornada de formación"></figure>
+    </div>
+  </header>
+  <section id="capacitacion-docente" aria-labelledby="capacitacion-titulo">
+    <div class="training-intro">
+      <p class="eyebrow">Formación docente</p>
+      <h2 id="capacitacion-titulo">Una jornada para pensar desafíos</h2>
+      <p>El equipo docente de Introducción a la Lógica y Problemas Computacionales participó de una jornada de formación sobre Pilas Bloques en el campo de deportes de la UNAHUR.</p>
+      <p>Durante el encuentro, Rocío González y Alfredo Sanzo compartieron los orígenes y el sentido pedagógico de la herramienta. A través de una dinámica participativa, docentes, asistentes y ayudantes trabajaron en la construcción de problemas y reflexionaron sobre cómo diseñar desafíos que permitan enseñar, aprender y evaluar conceptos de programación.</p>
+    </div>
+    <div class="gallery-grid training-grid">
+    <figure class="gallery-item"><button type="button" class="gallery-open" data-full="imagenes/capacitacion-docente/Rocio_Alfredo.jpeg" data-title="Rocío González y Alfredo Sanzo" data-alt="Rocío González y Alfredo Sanzo durante la jornada"><img src="imagenes/capacitacion-docente/Rocio_Alfredo.jpeg" alt="Rocío González y Alfredo Sanzo durante la jornada" loading="lazy"><span>Ampliar imagen</span></button><figcaption><strong>Rocío González y Alfredo Sanzo</strong><span>Un encuentro para compartir la historia y el sentido pedagógico de Pilas Bloques.</span></figcaption></figure>
+    <figure class="gallery-item"><button type="button" class="gallery-open" data-full="imagenes/capacitacion-docente/Desafio_con_Alfredo.jpeg" data-title="Pensar desafíos" data-alt="Alfredo Sanzo escribe en el pizarrón durante la actividad"><img src="imagenes/capacitacion-docente/Desafio_con_Alfredo.jpeg" alt="Alfredo Sanzo escribe en el pizarrón durante la actividad" loading="lazy"><span>Ampliar imagen</span></button><figcaption><strong>Pensar desafíos</strong><span>Una actividad compartida para pensar la construcción de problemas.</span></figcaption></figure>
+    <figure class="gallery-item"><button type="button" class="gallery-open" data-full="imagenes/capacitacion-docente/Rocio_Gonzalez.jpeg" data-title="La herramienta y su propuesta" data-alt="Rocío González expone junto a una pantalla"><img src="imagenes/capacitacion-docente/Rocio_Gonzalez.jpeg" alt="Rocío González expone junto a una pantalla" loading="lazy"><span>Ampliar imagen</span></button><figcaption><strong>La herramienta y su propuesta</strong><span>Rocío González comparte la propuesta de Pilas Bloques.</span></figcaption></figure>
+    <figure class="gallery-item"><button type="button" class="gallery-open" data-full="imagenes/capacitacion-docente/Alfredo.jpeg" data-title="Intercambio de ideas" data-alt="Alfredo Sanzo expone junto a una pantalla"><img src="imagenes/capacitacion-docente/Alfredo.jpeg" alt="Alfredo Sanzo expone junto a una pantalla" loading="lazy"><span>Ampliar imagen</span></button><figcaption><strong>Intercambio de ideas</strong><span>Alfredo Sanzo comparte ideas con el equipo docente.</span></figcaption></figure>
+    <figure class="gallery-item"><button type="button" class="gallery-open" data-full="imagenes/capacitacion-docente/almuerzo_compartido.jpeg" data-title="Almuerzo compartido" data-alt="Participantes de la jornada reunidos alrededor de una mesa"><img src="imagenes/capacitacion-docente/almuerzo_compartido.jpeg" alt="Participantes de la jornada reunidos alrededor de una mesa" loading="lazy"><span>Ampliar imagen</span></button><figcaption><strong>Almuerzo compartido</strong><span>Un momento de encuentro entre quienes participaron de la jornada.</span></figcaption></figure>
+    </div>
+  </section>
+
+</main>
+
+<dialog class="lightbox" aria-labelledby="lightbox-title">
+  <div class="lightbox-bar"><h2 id="lightbox-title">Imagen ampliada</h2><button type="button" class="lightbox-close" aria-label="Cerrar imagen ampliada">Cerrar ×</button></div>
+  <img src="" alt="">
+</dialog>
+
+<footer><div><strong>Introducción a la Lógica y Problemas Computacionales</strong><span>Universidad Nacional de Hurlingham · <span data-year>2026</span></span></div><p>Proyecto educativo con Pilas Bloques</p></footer>
+</body>
+</html>
